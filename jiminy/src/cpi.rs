@@ -18,9 +18,28 @@ pub fn cpi_sol_to_lst<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
     abr: &'cpi mut Abr,
     svc_prog: AccountHandle<'accounts>,
     lamports: u64,
-    accs: IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
 ) -> Result<RangeInclusive<u64>, ProgramError> {
     prepare(
+        cpi,
+        abr,
+        svc_prog,
+        SolToLstIxData::new(lamports).as_buf(),
+        accs,
+    )
+    .and_then(invoke)
+}
+
+/// [`cpi_sol_to_lst`] but using a svc program address instead of handle
+#[inline]
+pub fn cpi_sol_to_lst_id<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
+    cpi: &'cpi mut Cpi<MAX_CPI_ACCS>,
+    abr: &'cpi mut Abr,
+    svc_prog: &'cpi [u8; 32],
+    lamports: u64,
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+) -> Result<RangeInclusive<u64>, ProgramError> {
+    prepare_id(
         cpi,
         abr,
         svc_prog,
@@ -36,9 +55,28 @@ pub fn cpi_lst_to_sol<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
     abr: &'cpi mut Abr,
     svc_prog: AccountHandle<'accounts>,
     lst_amt: u64,
-    accs: IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
 ) -> Result<RangeInclusive<u64>, ProgramError> {
     prepare(
+        cpi,
+        abr,
+        svc_prog,
+        LstToSolIxData::new(lst_amt).as_buf(),
+        accs,
+    )
+    .and_then(invoke)
+}
+
+/// [`cpi_lst_to_sol`] but using a svc program address instead of handle
+#[inline]
+pub fn cpi_lst_to_sol_id<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
+    cpi: &'cpi mut Cpi<MAX_CPI_ACCS>,
+    abr: &'cpi mut Abr,
+    svc_prog: &'cpi [u8; 32],
+    lst_amt: u64,
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+) -> Result<RangeInclusive<u64>, ProgramError> {
+    prepare_id(
         cpi,
         abr,
         svc_prog,
@@ -57,10 +95,25 @@ fn prepare<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
     abr: &'cpi mut Abr,
     svc_prog: AccountHandle<'accounts>,
     ix_data: &'cpi [u8; IX_DATA_LEN],
-    accs: IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
 ) -> Result<CpiBuilder<'cpi, MAX_CPI_ACCS, true>, ProgramError> {
     CpiBuilder::new(cpi, abr)
         .with_prog_handle(svc_prog)
+        .with_ix_data(ix_data)
+        .with_accounts_fwd(accs.seq().copied())
+}
+
+/// [`prepare`] but using a svc program address instead of handle
+#[inline]
+fn prepare_id<'cpi, 'accounts, const MAX_CPI_ACCS: usize>(
+    cpi: &'cpi mut Cpi<MAX_CPI_ACCS>,
+    abr: &'cpi mut Abr,
+    svc_prog: &'cpi [u8; 32],
+    ix_data: &'cpi [u8; IX_DATA_LEN],
+    accs: &IxAccountHandles<'accounts, impl AsRef<[AccountHandle<'accounts>]>>,
+) -> Result<CpiBuilder<'cpi, MAX_CPI_ACCS, true>, ProgramError> {
+    CpiBuilder::new(cpi, abr)
+        .with_prog_id(svc_prog)
         .with_ix_data(ix_data)
         .with_accounts_fwd(accs.seq().copied())
 }
@@ -75,10 +128,7 @@ fn invoke<const MAX_CPI_ACCS: usize>(
         .as_ref()
         .map(|d| d.data())
         .and_then(|s| s.split_first_chunk::<8>())
-        .and_then(|(min, rem)| {
-            rem.split_first_chunk::<8>()
-                .map(|(max, _rem_must_be_empty_because_ret_data_max_len_16)| (min, max))
-        })
+        .and_then(|(min, rem)| rem.first_chunk::<8>().map(|max| (min, max)))
         .ok_or(BORSH_IO_ERROR)?;
     Ok(u64::from_le_bytes(*min)..=u64::from_le_bytes(*max))
 }
