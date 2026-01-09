@@ -1,12 +1,14 @@
-# inf-1.5
+# sanctum-sol-val-calc
 
-INF V1.5 (aka [S](https://github.com/igneous-labs/S)). Reworked SDKs and incremental program upgrades.
+SDKs for the [Sanctum SOL Value Calculator onchain programs](https://github.com/igneous-labs/S/tree/master/docs/sol-value-calculator-programs)
 
-## Why new repo?
+## NOTE: REPO UNDER CONSTRUCTION
 
-v1 solana SDKs were obstructing development so much that it was just easier to start from scratch.
+TODO:
 
-Most of the [docs relating to architecture and design in the old repo](https://github.com/igneous-labs/S/tree/master/docs) are still relevant and should be read prior.
+- add tests
+- migrate [inf-1.5](https://github.com/igneous-labs/inf-1.5) to use this repo
+- implement new/ upgrade existing programs（Loader V4 changes)
 
 ## solana toolchain vers
 
