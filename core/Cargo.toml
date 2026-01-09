@@ -1,0 +1,8 @@
+[package]
+name = "inf1-svc-core"
+edition.workspace = true
+version.workspace = true
+license-file.workspace = true
+
+[dependencies]
+generic-array-struct = { workspace = true }

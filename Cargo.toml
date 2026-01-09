@@ -1,0 +1,58 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "ag/*",
+    "core",
+    "generic",
+    "jiminy",
+    "legacy/*",
+    "lido/*",
+    "marinade/*",
+    "spl/*",
+    "std",
+    "update-traits",
+    "wsol/*",
+]
+
+[workspace.package]
+edition = "2021"
+license-file = "LICENSE"
+version = "0.1.0"
+
+[workspace.dependencies]
+# In general, keep default-features = false in workspace
+# and enable individual features in indiv crates
+const-crypto = { version = "^0.3.0", default-features = false }
+generic-array-struct = { version = "^0.3.2", default-features = false }
+sanctum-fee-ratio = { version = "^2.1", default-features = false }
+sanctum-u64-ratio = { version = "^2.1", default-features = false }
+
+# dev-dependencies
+
+# individual stake pool SDKs (for impls)
+sanctum-marinade-liquid-staking-core = { git = "https://github.com/igneous-labs/sanctum-marinade-liquid-staking-sdk.git", branch = "main", default-features = false }
+sanctum-spl-stake-pool-core = { git = "https://github.com/igneous-labs/sanctum-spl-stake-pool-sdk.git", branch = "master", default-features = false }
+solido-legacy-core = { git = "https://github.com/igneous-labs/solido-legacy-sdk.git", branch = "master", default-features = false }
+
+# jiminy crates
+jiminy-cpi = { git = "https://github.com/igneous-labs/jiminy.git", branch = "master", default-features = false }
+jiminy-return-data = { git = "https://github.com/igneous-labs/jiminy.git", branch = "master", default-features = false }
+
+# workspace members
+inf1-svc-ag-core = { path = "ag/core" }
+inf1-svc-ag-std = { path = "ag/std" }
+inf1-svc-core = { path = "core" }
+inf1-svc-generic = { path = "generic" }
+inf1-svc-jiminy = { path = "jiminy" }
+inf1-svc-lido-core = { path = "lido/core" }
+inf1-svc-lido-std = { path = "lido/std" }
+inf1-svc-marinade-core = { path = "marinade/core" }
+inf1-svc-marinade-std = { path = "marinade/std" }
+inf1-svc-spl-core = { path = "spl/core" }
+inf1-svc-spl-std = { path = "spl/std" }
+inf1-svc-std = { path = "std" }
+inf1-svc-wsol-core = { path = "wsol/core" }
+inf1-svc-wsol-std = { path = "wsol/std" }
+inf1-update-traits = { path = "update-traits" }
+sanctum-token-ratio-compat = { path = "legacy/sanctum-token-ratio-compat" }
