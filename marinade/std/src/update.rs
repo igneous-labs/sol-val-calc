@@ -4,7 +4,7 @@ use std::{
     iter::once,
 };
 
-use inf1_svc_marinade_core::{
+use sanctum_svc_marinade_core::{
     calc::MarinadeCalc,
     sanctum_marinade_liquid_staking_core::{State, STATE_PUBKEY},
 };
@@ -12,7 +12,7 @@ use inf1_svc_marinade_core::{
 use crate::MarinadeSvcStd;
 
 // Re-exports
-pub use inf1_svc_std::update::*;
+pub use sanctum_svc_std::update::*;
 
 pub type PkIter = core::iter::Once<[u8; 32]>;
 

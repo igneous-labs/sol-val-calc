@@ -1,7 +1,7 @@
-use inf1_svc_wsol_core::{calc::WsolCalc, instructions::sol_val_calc::WsolCalcAccs};
+use sanctum_svc_wsol_core::{calc::WsolCalc, instructions::sol_val_calc::WsolCalcAccs};
 
 // Re-exports
-pub use inf1_svc_wsol_core::*;
+pub use sanctum_svc_wsol_core::*;
 
 pub mod update;
 

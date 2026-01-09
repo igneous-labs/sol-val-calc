@@ -1,7 +1,7 @@
-use inf1_svc_lido_core::{calc::LidoCalc, instructions::sol_val_calc::LidoCalcAccs};
+use sanctum_svc_lido_core::{calc::LidoCalc, instructions::sol_val_calc::LidoCalcAccs};
 
 // Re-exports
-pub use inf1_svc_lido_core::*;
+pub use sanctum_svc_lido_core::*;
 
 pub mod update;
 

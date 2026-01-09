@@ -3,7 +3,7 @@ use std::{convert::Infallible, iter::empty};
 use crate::WsolSvcStd;
 
 // Re-exports
-pub use inf1_svc_std::update::*;
+pub use sanctum_svc_std::update::*;
 
 pub type PkIter = core::iter::Empty<[u8; 32]>;
 

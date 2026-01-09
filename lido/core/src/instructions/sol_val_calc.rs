@@ -1,7 +1,7 @@
 //! SolValCalc interface instructions
 
-use inf1_svc_core::traits::SolValCalcAccs;
-use inf1_svc_generic::instructions::{
+use sanctum_svc_core::traits::SolValCalcAccs;
+use sanctum_svc_generic::instructions::{
     IxSufAccFlags, IxSufKeysOwned, IX_SUF_IS_SIGNER, IX_SUF_IS_WRITER,
 };
 use solido_legacy_core::LIDO_STATE_ADDR;

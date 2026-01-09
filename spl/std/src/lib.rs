@@ -1,10 +1,10 @@
-use inf1_svc_spl_core::{
+use sanctum_svc_spl_core::{
     calc::SplCalc,
     instructions::sol_val_calc::{SanctumSplCalcAccs, SanctumSplMultiCalcAccs, SplCalcAccs},
 };
 
 // Re-exports
-pub use inf1_svc_spl_core::*;
+pub use sanctum_svc_spl_core::*;
 
 pub mod update;
 

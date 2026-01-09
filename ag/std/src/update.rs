@@ -1,13 +1,13 @@
-use inf1_svc_ag_core::SvcAg;
+use sanctum_svc_ag_core::SvcAg;
 
 use crate::SvcAgStd;
 
 // Re-exports
-pub use inf1_svc_lido_std::update::{LidoUpdateErr, PkIter as LidoPkIter};
-pub use inf1_svc_marinade_std::update::{MarinadeUpdateErr, PkIter as MarinadePkIter};
-pub use inf1_svc_spl_std::update::{PkIter as SplPkIter, SplUpdateErr};
-pub use inf1_svc_std::update::*;
-pub use inf1_svc_wsol_std::update::{PkIter as WsolPkIter, WsolUpdateErr};
+pub use sanctum_svc_lido_std::update::{LidoUpdateErr, PkIter as LidoPkIter};
+pub use sanctum_svc_marinade_std::update::{MarinadeUpdateErr, PkIter as MarinadePkIter};
+pub use sanctum_svc_spl_std::update::{PkIter as SplPkIter, SplUpdateErr};
+pub use sanctum_svc_std::update::*;
+pub use sanctum_svc_wsol_std::update::{PkIter as WsolPkIter, WsolUpdateErr};
 
 pub type SvcPkIterAg =
     SvcAg<LidoPkIter, MarinadePkIter, SplPkIter, SplPkIter, SplPkIter, WsolPkIter>;

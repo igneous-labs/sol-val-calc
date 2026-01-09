@@ -3,7 +3,7 @@ use std::{
     fmt::{Display, Formatter},
 };
 
-use inf1_svc_spl_core::{
+use sanctum_svc_spl_core::{
     calc::SplCalc,
     sanctum_spl_stake_pool_core::{StakePool, SYSVAR_CLOCK},
 };
@@ -11,7 +11,7 @@ use inf1_svc_spl_core::{
 use crate::{SanctumSplMultiSvcStd, SanctumSplSvcStd, SplSvcStd};
 
 // Re-exports
-pub use inf1_svc_std::update::*;
+pub use sanctum_svc_std::update::*;
 
 pub type PkIter = core::array::IntoIter<[u8; 32], 2>;
 

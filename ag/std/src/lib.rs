@@ -1,16 +1,16 @@
-use inf1_svc_ag_core::{calc::SvcCalcAgRef, instructions::SvcCalcAccsAgRef};
+use sanctum_svc_ag_core::{calc::SvcCalcAgRef, instructions::SvcCalcAccsAgRef};
 
-use inf1_svc_lido_std::LidoSvcStd;
-use inf1_svc_marinade_std::MarinadeSvcStd;
-use inf1_svc_spl_std::{SanctumSplMultiSvcStd, SanctumSplSvcStd, SplSvcStd};
-use inf1_svc_wsol_std::WsolSvcStd;
+use sanctum_svc_lido_std::LidoSvcStd;
+use sanctum_svc_marinade_std::MarinadeSvcStd;
+use sanctum_svc_spl_std::{SanctumSplMultiSvcStd, SanctumSplSvcStd, SplSvcStd};
+use sanctum_svc_wsol_std::WsolSvcStd;
 
 // Re-exports
-pub use inf1_svc_ag_core::*;
-pub use inf1_svc_lido_std;
-pub use inf1_svc_marinade_std;
-pub use inf1_svc_spl_std;
-pub use inf1_svc_wsol_std;
+pub use sanctum_svc_ag_core::*;
+pub use sanctum_svc_lido_std;
+pub use sanctum_svc_marinade_std;
+pub use sanctum_svc_spl_std;
+pub use sanctum_svc_wsol_std;
 
 pub mod update;
 

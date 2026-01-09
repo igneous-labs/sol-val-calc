@@ -1,5 +1,5 @@
 use generic_array_struct::generic_array_struct;
-use inf1_svc_core::traits::SolValCalcAccs;
+use sanctum_svc_core::traits::SolValCalcAccs;
 
 /// This program has no additional accounts suffix
 #[generic_array_struct(builder pub)]

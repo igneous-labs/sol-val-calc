@@ -1,4 +1,4 @@
-use inf1_svc_generic::pda::const_find_state;
+use sanctum_svc_generic::pda::const_find_state;
 
 macro_rules! id_str {
     ($ID_STR:ident, $ID:ident, $pkstr:expr) => {

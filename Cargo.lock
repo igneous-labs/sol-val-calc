@@ -82,146 +82,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "inf1-svc-ag-core"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-core",
- "inf1-svc-generic",
- "inf1-svc-lido-core",
- "inf1-svc-marinade-core",
- "inf1-svc-spl-core",
- "inf1-svc-wsol-core",
-]
-
-[[package]]
-name = "inf1-svc-ag-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-ag-core",
- "inf1-svc-lido-std",
- "inf1-svc-marinade-std",
- "inf1-svc-spl-std",
- "inf1-svc-std",
- "inf1-svc-wsol-std",
-]
-
-[[package]]
-name = "inf1-svc-core"
-version = "0.1.0"
-dependencies = [
- "generic-array-struct",
-]
-
-[[package]]
-name = "inf1-svc-generic"
-version = "0.1.0"
-dependencies = [
- "const-crypto",
- "generic-array-struct",
-]
-
-[[package]]
-name = "inf1-svc-jiminy"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-core",
- "jiminy-cpi",
- "jiminy-return-data",
-]
-
-[[package]]
-name = "inf1-svc-lido-core"
-version = "0.1.0"
-dependencies = [
- "const-crypto",
- "generic-array-struct",
- "inf1-svc-core",
- "inf1-svc-generic",
- "sanctum-token-ratio-compat",
- "solido-legacy-core",
-]
-
-[[package]]
-name = "inf1-svc-lido-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-lido-core",
- "inf1-svc-std",
-]
-
-[[package]]
-name = "inf1-svc-marinade-core"
-version = "0.1.0"
-dependencies = [
- "const-crypto",
- "generic-array-struct",
- "inf1-svc-core",
- "inf1-svc-generic",
- "sanctum-marinade-liquid-staking-core",
- "sanctum-token-ratio-compat",
- "sanctum-u64-ratio",
-]
-
-[[package]]
-name = "inf1-svc-marinade-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-marinade-core",
- "inf1-svc-std",
-]
-
-[[package]]
-name = "inf1-svc-spl-core"
-version = "0.1.0"
-dependencies = [
- "const-crypto",
- "generic-array-struct",
- "inf1-svc-core",
- "inf1-svc-generic",
- "sanctum-fee-ratio",
- "sanctum-spl-stake-pool-core",
- "sanctum-token-ratio-compat",
- "sanctum-u64-ratio",
-]
-
-[[package]]
-name = "inf1-svc-spl-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-spl-core",
- "inf1-svc-std",
-]
-
-[[package]]
-name = "inf1-svc-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-core",
- "inf1-update-traits",
-]
-
-[[package]]
-name = "inf1-svc-wsol-core"
-version = "0.1.0"
-dependencies = [
- "const-crypto",
- "generic-array-struct",
- "inf1-svc-core",
-]
-
-[[package]]
-name = "inf1-svc-wsol-std"
-version = "0.1.0"
-dependencies = [
- "inf1-svc-std",
- "inf1-svc-wsol-core",
-]
-
-[[package]]
-name = "inf1-update-traits"
-version = "0.1.0"
-
-[[package]]
 name = "jiminy-account"
 version = "0.1.0"
 source = "git+https://github.com/igneous-labs/jiminy.git?branch=master#74ac27a8c991e27603b0a84b45f57b1e66105c91"
@@ -345,6 +205,142 @@ dependencies = [
 ]
 
 [[package]]
+name = "sanctum-svc-ag-core"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-core",
+ "sanctum-svc-generic",
+ "sanctum-svc-lido-core",
+ "sanctum-svc-marinade-core",
+ "sanctum-svc-spl-core",
+ "sanctum-svc-wsol-core",
+]
+
+[[package]]
+name = "sanctum-svc-ag-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-ag-core",
+ "sanctum-svc-lido-std",
+ "sanctum-svc-marinade-std",
+ "sanctum-svc-spl-std",
+ "sanctum-svc-std",
+ "sanctum-svc-wsol-std",
+]
+
+[[package]]
+name = "sanctum-svc-core"
+version = "0.1.0"
+dependencies = [
+ "generic-array-struct",
+]
+
+[[package]]
+name = "sanctum-svc-generic"
+version = "0.1.0"
+dependencies = [
+ "const-crypto",
+ "generic-array-struct",
+]
+
+[[package]]
+name = "sanctum-svc-jiminy"
+version = "0.1.0"
+dependencies = [
+ "jiminy-cpi",
+ "jiminy-return-data",
+ "sanctum-svc-core",
+]
+
+[[package]]
+name = "sanctum-svc-lido-core"
+version = "0.1.0"
+dependencies = [
+ "const-crypto",
+ "generic-array-struct",
+ "sanctum-svc-core",
+ "sanctum-svc-generic",
+ "sanctum-token-ratio-compat",
+ "solido-legacy-core",
+]
+
+[[package]]
+name = "sanctum-svc-lido-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-lido-core",
+ "sanctum-svc-std",
+]
+
+[[package]]
+name = "sanctum-svc-marinade-core"
+version = "0.1.0"
+dependencies = [
+ "const-crypto",
+ "generic-array-struct",
+ "sanctum-marinade-liquid-staking-core",
+ "sanctum-svc-core",
+ "sanctum-svc-generic",
+ "sanctum-token-ratio-compat",
+ "sanctum-u64-ratio",
+]
+
+[[package]]
+name = "sanctum-svc-marinade-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-marinade-core",
+ "sanctum-svc-std",
+]
+
+[[package]]
+name = "sanctum-svc-spl-core"
+version = "0.1.0"
+dependencies = [
+ "const-crypto",
+ "generic-array-struct",
+ "sanctum-fee-ratio",
+ "sanctum-spl-stake-pool-core",
+ "sanctum-svc-core",
+ "sanctum-svc-generic",
+ "sanctum-token-ratio-compat",
+ "sanctum-u64-ratio",
+]
+
+[[package]]
+name = "sanctum-svc-spl-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-spl-core",
+ "sanctum-svc-std",
+]
+
+[[package]]
+name = "sanctum-svc-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-core",
+ "sanctum-update-traits",
+]
+
+[[package]]
+name = "sanctum-svc-wsol-core"
+version = "0.1.0"
+dependencies = [
+ "const-crypto",
+ "generic-array-struct",
+ "sanctum-svc-core",
+]
+
+[[package]]
+name = "sanctum-svc-wsol-std"
+version = "0.1.0"
+dependencies = [
+ "sanctum-svc-std",
+ "sanctum-svc-wsol-core",
+]
+
+[[package]]
 name = "sanctum-token-ratio-compat"
 version = "0.1.0"
 dependencies = [
@@ -357,6 +353,10 @@ name = "sanctum-u64-ratio"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "399670a93a811c1eb179b3d0e2953ab93bef325333272c1ed40efd0732c31225"
+
+[[package]]
+name = "sanctum-update-traits"
+version = "0.1.0"
 
 [[package]]
 name = "sha2-const-stable"

@@ -1,6 +1,6 @@
 use core::{error::Error, fmt::Display, ops::RangeInclusive};
 
-use inf1_svc_core::traits::SolValCalc;
+use sanctum_svc_core::traits::SolValCalc;
 use sanctum_token_ratio_compat::floor_ratio_u64_u64_reverse;
 use solido_legacy_core::{ExchangeRate, Lido};
 

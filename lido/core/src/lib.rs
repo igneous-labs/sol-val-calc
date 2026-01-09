@@ -1,8 +1,8 @@
 #![cfg_attr(not(test), no_std)]
 
 // Re-exports
-pub use inf1_svc_core;
-pub use inf1_svc_generic;
+pub use sanctum_svc_core;
+pub use sanctum_svc_generic;
 pub use solido_legacy_core;
 
 pub mod calc;

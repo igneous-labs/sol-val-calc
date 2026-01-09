@@ -1,8 +1,8 @@
 use core::{error::Error, fmt::Display, ops::RangeInclusive};
 
-use inf1_svc_core::traits::SolValCalc;
 use sanctum_fee_ratio::ratio::{Ceil, Ratio};
 use sanctum_spl_stake_pool_core::{Fee, StakePool};
+use sanctum_svc_core::traits::SolValCalc;
 use sanctum_token_ratio_compat::{
     fee_ceil_ratio_u64_u64_reverse_from_rem, floor_ratio_u64_u64_reverse,
 };

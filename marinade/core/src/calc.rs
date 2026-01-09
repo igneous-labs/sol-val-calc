@@ -1,7 +1,7 @@
 use core::{error::Error, fmt::Display, ops::RangeInclusive};
 
-use inf1_svc_core::traits::SolValCalc;
 use sanctum_marinade_liquid_staking_core::{FeeCents, StakeSystem, State, ValidatorSystem};
+use sanctum_svc_core::traits::SolValCalc;
 use sanctum_token_ratio_compat::{
     fee_floor_ratio_u32_u32_reverse_from_rem, floor_ratio_u64_u64_reverse,
 };

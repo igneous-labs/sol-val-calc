@@ -40,19 +40,19 @@ jiminy-cpi = { git = "https://github.com/igneous-labs/jiminy.git", branch = "mas
 jiminy-return-data = { git = "https://github.com/igneous-labs/jiminy.git", branch = "master", default-features = false }
 
 # workspace members
-inf1-svc-ag-core = { path = "ag/core" }
-inf1-svc-ag-std = { path = "ag/std" }
-inf1-svc-core = { path = "core" }
-inf1-svc-generic = { path = "generic" }
-inf1-svc-jiminy = { path = "jiminy" }
-inf1-svc-lido-core = { path = "lido/core" }
-inf1-svc-lido-std = { path = "lido/std" }
-inf1-svc-marinade-core = { path = "marinade/core" }
-inf1-svc-marinade-std = { path = "marinade/std" }
-inf1-svc-spl-core = { path = "spl/core" }
-inf1-svc-spl-std = { path = "spl/std" }
-inf1-svc-std = { path = "std" }
-inf1-svc-wsol-core = { path = "wsol/core" }
-inf1-svc-wsol-std = { path = "wsol/std" }
-inf1-update-traits = { path = "update-traits" }
+sanctum-svc-ag-core = { path = "ag/core" }
+sanctum-svc-ag-std = { path = "ag/std" }
+sanctum-svc-core = { path = "core" }
+sanctum-svc-generic = { path = "generic" }
+sanctum-svc-jiminy = { path = "jiminy" }
+sanctum-svc-lido-core = { path = "lido/core" }
+sanctum-svc-lido-std = { path = "lido/std" }
+sanctum-svc-marinade-core = { path = "marinade/core" }
+sanctum-svc-marinade-std = { path = "marinade/std" }
+sanctum-svc-spl-core = { path = "spl/core" }
+sanctum-svc-spl-std = { path = "spl/std" }
+sanctum-svc-std = { path = "std" }
+sanctum-svc-wsol-core = { path = "wsol/core" }
+sanctum-svc-wsol-std = { path = "wsol/std" }
+sanctum-update-traits = { path = "update-traits" }
 sanctum-token-ratio-compat = { path = "legacy/sanctum-token-ratio-compat" }

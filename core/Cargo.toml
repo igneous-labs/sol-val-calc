@@ -1,5 +1,5 @@
 [package]
-name = "inf1-svc-core"
+name = "sanctum-svc-core"
 edition.workspace = true
 version.workspace = true
 license-file.workspace = true

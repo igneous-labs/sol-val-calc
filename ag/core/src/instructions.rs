@@ -1,10 +1,10 @@
-use inf1_svc_core::traits::SolValCalcAccs;
-use inf1_svc_lido_core::instructions::sol_val_calc::LidoCalcAccs;
-use inf1_svc_marinade_core::instructions::sol_val_calc::MarinadeCalcAccs;
-use inf1_svc_spl_core::instructions::sol_val_calc::{
+use sanctum_svc_core::traits::SolValCalcAccs;
+use sanctum_svc_lido_core::instructions::sol_val_calc::LidoCalcAccs;
+use sanctum_svc_marinade_core::instructions::sol_val_calc::MarinadeCalcAccs;
+use sanctum_svc_spl_core::instructions::sol_val_calc::{
     SanctumSplCalcAccs, SanctumSplMultiCalcAccs, SplCalcAccs,
 };
-use inf1_svc_wsol_core::instructions::sol_val_calc::WsolCalcAccs;
+use sanctum_svc_wsol_core::instructions::sol_val_calc::WsolCalcAccs;
 
 use crate::SvcAg;
 

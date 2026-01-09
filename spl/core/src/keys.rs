@@ -8,7 +8,7 @@ pub(crate) use id_str;
 
 macro_rules! const_state_pda {
     () => {
-        const STATE: ([u8; 32], u8) = inf1_svc_generic::pda::const_find_state(&ID);
+        const STATE: ([u8; 32], u8) = sanctum_svc_generic::pda::const_find_state(&ID);
         pub const STATE_ID: [u8; 32] = STATE.0;
         pub const STATE_BUMP: u8 = STATE.1;
         pub const STATE_ID_STR: &str = const_crypto::bs58::encode_pubkey(&STATE_ID).str();

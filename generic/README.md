@@ -1,4 +1,4 @@
-# inf1-svc-generic
+# sanctum-svc-generic
 
 Defines common behaviours of generic sol value calculator programs. These programs:
 

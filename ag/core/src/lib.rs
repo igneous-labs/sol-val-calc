@@ -3,12 +3,12 @@
 use core::{error::Error, fmt::Display};
 
 // Re-exports
-pub use inf1_svc_core;
-pub use inf1_svc_generic;
-pub use inf1_svc_lido_core;
-pub use inf1_svc_marinade_core;
-pub use inf1_svc_spl_core;
-pub use inf1_svc_wsol_core;
+pub use sanctum_svc_core;
+pub use sanctum_svc_generic;
+pub use sanctum_svc_lido_core;
+pub use sanctum_svc_marinade_core;
+pub use sanctum_svc_spl_core;
+pub use sanctum_svc_wsol_core;
 
 pub mod calc;
 pub mod instructions;
@@ -187,12 +187,12 @@ impl<Lido, Marinade, SanctumSpl, SanctumSplMulti, Spl, Wsol>
     #[inline]
     pub const fn svc_program_id(&self) -> &[u8; 32] {
         match self {
-            Self::Lido(_) => &inf1_svc_lido_core::ID,
-            Self::Marinade(_) => &inf1_svc_marinade_core::ID,
-            Self::SanctumSpl(_) => &inf1_svc_spl_core::keys::sanctum_spl::ID,
-            Self::SanctumSplMulti(_) => &inf1_svc_spl_core::keys::sanctum_spl_multi::ID,
-            Self::Spl(_) => &inf1_svc_spl_core::keys::spl::ID,
-            Self::Wsol(_) => &inf1_svc_wsol_core::ID,
+            Self::Lido(_) => &sanctum_svc_lido_core::ID,
+            Self::Marinade(_) => &sanctum_svc_marinade_core::ID,
+            Self::SanctumSpl(_) => &sanctum_svc_spl_core::keys::sanctum_spl::ID,
+            Self::SanctumSplMulti(_) => &sanctum_svc_spl_core::keys::sanctum_spl_multi::ID,
+            Self::Spl(_) => &sanctum_svc_spl_core::keys::spl::ID,
+            Self::Wsol(_) => &sanctum_svc_wsol_core::ID,
         }
     }
 }
@@ -203,12 +203,12 @@ impl SvcAgTy {
     #[inline]
     pub const fn try_from_svc_program_id(program_id: &[u8; 32]) -> Option<Self> {
         Some(match *program_id {
-            inf1_svc_lido_core::ID => Self::Lido(()),
-            inf1_svc_marinade_core::ID => Self::Marinade(()),
-            inf1_svc_spl_core::keys::sanctum_spl::ID => Self::SanctumSpl(()),
-            inf1_svc_spl_core::keys::sanctum_spl_multi::ID => Self::SanctumSplMulti(()),
-            inf1_svc_spl_core::keys::spl::ID => Self::Spl(()),
-            inf1_svc_wsol_core::ID => Self::Wsol(()),
+            sanctum_svc_lido_core::ID => Self::Lido(()),
+            sanctum_svc_marinade_core::ID => Self::Marinade(()),
+            sanctum_svc_spl_core::keys::sanctum_spl::ID => Self::SanctumSpl(()),
+            sanctum_svc_spl_core::keys::sanctum_spl_multi::ID => Self::SanctumSplMulti(()),
+            sanctum_svc_spl_core::keys::spl::ID => Self::Spl(()),
+            sanctum_svc_wsol_core::ID => Self::Wsol(()),
             _ => return None,
         })
     }

@@ -1,4 +1,4 @@
 // Re-exports
-pub use inf1_svc_core::*;
+pub use sanctum_svc_core::*;
 
 pub mod update;

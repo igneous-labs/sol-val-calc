@@ -1,6 +1,6 @@
 use core::{convert::Infallible, ops::RangeInclusive};
 
-use inf1_svc_core::traits::SolValCalc;
+use sanctum_svc_core::traits::SolValCalc;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct WsolCalc;

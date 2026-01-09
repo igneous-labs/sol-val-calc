@@ -1,10 +1,10 @@
 use core::{convert::Infallible, ops::RangeInclusive};
 
-use inf1_svc_core::traits::SolValCalc;
-use inf1_svc_lido_core::calc::{LidoCalc, LidoCalcErr};
-use inf1_svc_marinade_core::calc::{MarinadeCalc, MarinadeCalcErr};
-use inf1_svc_spl_core::calc::{SplCalc, SplCalcErr};
-use inf1_svc_wsol_core::calc::WsolCalc;
+use sanctum_svc_core::traits::SolValCalc;
+use sanctum_svc_lido_core::calc::{LidoCalc, LidoCalcErr};
+use sanctum_svc_marinade_core::calc::{MarinadeCalc, MarinadeCalcErr};
+use sanctum_svc_spl_core::calc::{SplCalc, SplCalcErr};
+use sanctum_svc_wsol_core::calc::WsolCalc;
 
 use crate::SvcAg;
 

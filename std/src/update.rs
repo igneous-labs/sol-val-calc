@@ -1,7 +1,7 @@
 use std::error::Error;
 
 // Re-exports
-pub use inf1_update_traits::{Account, UpdateErr, UpdateMap};
+pub use sanctum_update_traits::{Account, UpdateErr, UpdateMap};
 
 pub trait AccountsToUpdateSvc {
     type PkIter: Iterator<Item = [u8; 32]>;

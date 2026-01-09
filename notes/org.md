@@ -8,4 +8,4 @@ Notes on organization of files and modules.
 
 `*-std` libraries build on top of the `*-core` libraries and can use the rust std lib. It should re-export `*-core::*` so that consumers should only need to either import the `*-core` lib or `*-std` lib.
 
-`get_accounts_to_update()` + `update_with_fetched_accounts()` functionality should be placed in the `*-std` lib because it brings in an additional `inf1-update-traits` dependency.
+`get_accounts_to_update()` + `update_with_fetched_accounts()` functionality should be placed in the `*-std` lib because it brings in an additional `sanctum-update-traits` dependency.

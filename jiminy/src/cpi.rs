@@ -1,14 +1,14 @@
 use core::ops::RangeInclusive;
 
-use inf1_svc_core::instructions::{
-    lst_to_sol::LstToSolIxData, sol_to_lst::SolToLstIxData, IxAccs, IX_DATA_LEN,
-};
 use jiminy_cpi::{
     account::{Abr, AccountHandle},
     program_error::{ProgramError, BORSH_IO_ERROR},
     Cpi, CpiBuilder,
 };
 use jiminy_return_data::get_return_data;
+use sanctum_svc_core::instructions::{
+    lst_to_sol::LstToSolIxData, sol_to_lst::SolToLstIxData, IxAccs, IX_DATA_LEN,
+};
 
 pub type IxAccountHandles<'a, P> = IxAccs<AccountHandle<'a>, P>;
 

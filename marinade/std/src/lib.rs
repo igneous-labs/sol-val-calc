@@ -1,7 +1,7 @@
-use inf1_svc_marinade_core::{calc::MarinadeCalc, instructions::sol_val_calc::MarinadeCalcAccs};
+use sanctum_svc_marinade_core::{calc::MarinadeCalc, instructions::sol_val_calc::MarinadeCalcAccs};
 
 // Re-exports
-pub use inf1_svc_marinade_core::*;
+pub use sanctum_svc_marinade_core::*;
 
 pub mod update;
 
