@@ -1,3 +1,7 @@
+# ARCHIVE NOTICE
+
+Development has been moved back to [Sanctum SOL Value Calculator onchain programs](https://github.com/igneous-labs/S/tree/master/docs/sol-value-calculator-programs) to avoid circular dependency issues with the INF sol value calculator.
+
 # sanctum-sol-val-calc
 
 SDKs for the [Sanctum SOL Value Calculator onchain programs](https://github.com/igneous-labs/S/tree/master/docs/sol-value-calculator-programs)
